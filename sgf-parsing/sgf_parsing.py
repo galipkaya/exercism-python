@@ -85,7 +85,7 @@ def add_to_map(structure_to_add, input_str):
         while input_str[i-1] == "\\":
             i = input_str.index("]", i+1)
         i += 1
-        
+
 
 def get_properties(input_str):
     if input_str[0] != "[":
