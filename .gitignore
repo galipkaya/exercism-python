@@ -6,3 +6,6 @@
 /exercism-python.iml
 /hackerrank.iml
 /hackerrank/*
+/hackerrank/
+/*/__pycache__
+
