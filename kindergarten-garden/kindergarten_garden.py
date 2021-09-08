@@ -1,21 +1,23 @@
 class Garden:
+    plant_letters = {
+        'G': "Grass",
+        'C': "Clover",
+        "R": "Radishes",
+        "V": "Violets"
+    }
+
+    default_students = ["Alice", "Bob", "Charlie", "David", "Eve", "Fred", "Ginny", "Harriet",
+                "Ileana", "Joseph", "Kincaid", "Larry"]
+
     def __init__(self, diagram, students=None):
         rows = diagram.split("\n")
         self.row1 = rows[0]
         self.row2 = rows[1]
 
-        if students is None:
-            self.students = ["Alice", "Bob", "Charlie", "David", "Eve", "Fred", "Ginny", "Harriet",
-                             "Ileana", "Joseph", "Kincaid", "Larry"]
+        if not students:
+            self.students = Garden.default_students
         else:
             self.students = sorted(students)
-
-        self.plant_letters = {
-            'G': "Grass",
-            'C': "Clover",
-            "R": "Radishes",
-            "V": "Violets"
-        }
 
     def plants(self, student):
         result = []
