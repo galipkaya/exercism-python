@@ -32,12 +32,10 @@ class BinarySearchTree:
 
     def sorted_data(self):
         def _sorted_data(node: TreeNode):
-            result = []
             if node.left is not None:
-                result.extend(_sorted_data(node.left))
-            result.append(node.data)
+                yield from _sorted_data(node.left)
+            yield node.data
             if node.right is not None:
-                result.extend(_sorted_data(node.right))
-            return result
+                yield from _sorted_data(node.right)
 
-        return _sorted_data(self.root)
+        return list(_sorted_data(self.root))
