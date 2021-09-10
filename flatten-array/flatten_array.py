@@ -4,7 +4,7 @@ def flatten(iterable):
     def fill_items(element):
         if element is None:
             return
-        
+
         if isinstance(element, list):
             for e in element:
                 fill_items(e)
