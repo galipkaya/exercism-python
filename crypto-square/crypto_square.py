@@ -5,7 +5,7 @@ def cipher_text(plain_text):
     if not plain_text:
         return ""
     text = [ch for ch in plain_text.lower() if ch.isalnum()]
-    
+
     # find lengths
     min_length = int(math.ceil(math.sqrt(len(text))))
     max_length = min_length
