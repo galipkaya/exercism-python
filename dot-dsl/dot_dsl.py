@@ -31,7 +31,7 @@ class Graph:
         if data:
             if type(data) != list:
                 raise TypeError("error")
-            
+
             for d in data:
                 length = len(d)
                 if length == 0:
